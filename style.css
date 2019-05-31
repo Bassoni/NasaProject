@@ -36,6 +36,7 @@ html
     background-image: url("images/background.png");
     background-attachment:fixed;
     background-size:cover;
+
 }
 
 body
@@ -55,13 +56,18 @@ body header div{
     justify-content: center;
 }
 
+body header>div{
+    background-color: rgba(0,0,0,0.7);
+
+}
+
 
 /* logo */
 div#logokit{
     margin-left: 3%;
     display: flex;
     align-items: center;
-    margin-right: 12%; 
+    margin-right: 5%; 
     border:  2px dashed white;
     border-radius: 50%
 }
@@ -87,6 +93,7 @@ div#logokit figure#logoBlock{
 }
 
 img#logo{
+    margin-top: 3px;
     width: 120px;
     height: 120px;
     border:  2px dashed white;
@@ -96,11 +103,14 @@ img#logo{
 
 div figure#baniereblock{
    margin: 0;
+   width: 100%;
 
 }
 
 figure#baniereblock img#baniere{
     width: 100%;
+    max-width: 1920px;
+    max-height: 705px;
 
 }
 
@@ -108,16 +118,17 @@ figure#baniereblock img#baniere{
 
 
 nav{
-    background-color: rgba(0,10,5,0.5);
+    background-color: rgba(0,0,0,0.7);
     border-radius: 15%;
     border: 3px solid grey;
+    margin-right: 4%;
 }
 /* menu */
 nav>ul>li>dl{
     display: flex;
     position: relative;
     font-size: 110%;
-    padding: 0 10px;
+    padding: 5px 10px;
 }
 
 li a,dt,ul{
@@ -126,8 +137,17 @@ li a,dt,ul{
     color: lightgrey;
 
 
+
+}
+nav ul li{
+    display: flex;
+    align-items: center;
 }
 
+nav ul li:not(:last-child){
+     border-right: 1px solid grey;
+
+}
 
 /* sous menu */
 #menu{
@@ -136,8 +156,6 @@ li a,dt,ul{
     flex-wrap: wrap;
     color: lightgrey;
     text-align: center;
-    margin-left: 0%;
-
 }
 
 #menu dl{
@@ -147,24 +165,19 @@ li a,dt,ul{
     justify-content: center;
 }
 
-
-
 main{
 
     margin: 0;
-    margin-left: 15%;
     letter-spacing: 2px;
-    
 }
+
 main h2{
 
     display: block;
     font-size: 3em;
-    margin-left: 10%;
+    margin-left: 15%;
     text-align: left;
-    margin-bottom: 10%;
-
-    
+    margin-bottom: 5%;
 }
 
 main ul {
@@ -176,25 +189,27 @@ main ul {
 main figure{
     display: flex;
     align-items: center;
-    padding: 0 60px 30px 0;
-    margin-left: 20%;
+    padding: 20px 10px 20px 0;
+    background-color: rgba(0,0,0,0.7);
+    cursor:pointer;
+
 }
 
 main figure img{
 
-    width: 210px;
+    width: 500px;
     height: 210px;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 main figure figcaption{
 
     font-size: 2.5em;
     font-weight: bold;
-    width: 200px;
+    width: 500px;
     text-align: left;
     line-height: 40px;
+    padding-left: 5px;
 
-  
 }
 
 
@@ -207,91 +222,84 @@ main figure figcaption{
 
 
 
-@media screen and (max-width: 950px){
+@media screen and (max-width: 1260px){
 
-
+   
     main h2{
-        font-size: 1.8em;
-        margin-left: 20%;
+        font-size: 1.9em;
+        margin-left: 10%;
         
     }
 
+    main ul{
+
+        justify-content: left;
+
+    }
 
     main figure{
         display: flex;
-        align-items: left;
-        justify-content: center;
-        margin-left: 0;
+        width: 250px;
+        padding: 20px 180px 20px 0;
     }
 
     main figure img{
-        margin: 0;
-        width: 80px;
-        height: 80px;
+        width: 200px;
+        height: 130px;
+        margin-left: 5%;
     }
     main figure figcaption{
         font-size: 1.6em;
         font-weight: bold;
-        width: 100px;
-        text-align: left;
+        width: 200px;
         line-height: 20px;
-        padding: 5px 0 0 8px;
+        padding-left: 5px;
     }
-
-    
-
 
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 950px){
 
     div#logokit div h1{
-        font-size: 150%;
+        font-size: 80%;
+        padding-left: 5px;
     }
+
     div#logokit div p#revolution{
 
         margin: 0 0 0 -15px;
         line-height: 0.3;
-        font-size: 100%;
+        font-size: 80%;
     }
+
     div#logokit figure#logoBlock{
-        margin-left: 10px; 
+        width: 50px;
     }
 
     img#logo{
-        width: 90px;
-        height: 90px;
+        width: 70px;
+        height: 70px;
 
     }
-    p#bulle1{
-        display: flex;
-        width: 200px;
-        position: absolute;
-        z-index: 10;
-        top: 27%;
-        left: 21%;
-    }
-
-    p#bulle2{
-        width: 200px;
-        position: absolute;
-        z-index: 10;
-        top: 42%;
-        left: 31%;
-    }
+    
 
     main h2{
+        display: flex;
         font-size: 1.5em;
-        margin-left: 20%;
         
     }
 
 
     main figure{
         display: flex;
-        align-items: left;
+        align-items: center;
         justify-content: center;
         margin-left: 0;
+        width: 250px;
+        padding: 10px 20px 10px 10px;
+
+
+
     }
 
     main figure img{
