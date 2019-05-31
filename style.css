@@ -1,0 +1,312 @@
+@font-face {
+    font-family: 'invanders from space';
+    src: url('spaceInvadersFont/invandersfromspace.eot');
+    src: url('spaceInvadersFont/invandersfromspace.eot?#iefix') format('embedded-opentype'),
+        url('spaceInvadersFont/invandersfromspace.woff2') format('woff2'),
+        url('spaceInvadersFont/invandersfromspace.woff') format('woff'),
+        url('spaceInvadersFont/invandersfromspace.ttf') format('truetype'),
+        url('spaceInvadersFont/invandersfromspace.svg#invandersfromspace') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nasalization Rg';
+    src: url('nasaFont/NasalizationRg-Regular.eot');
+    src: url('nasaFont/NasalizationRg-Regular.eot?#iefix') format('embedded-opentype'),
+        url('nasaFont/NasalizationRg-Regular.woff2') format('woff2'),
+        url('nasaFont/NasalizationRg-Regular.woff') format('woff'),
+        url('nasaFont/NasalizationRg-Regular.ttf') format('truetype'),
+        url('nasaFont/NasalizationRg-Regular.svg#NasalizationRg-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+html
+{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Nasalization Rg';
+    color: lightgrey;
+    background-image: url("images/background.png");
+    background-attachment:fixed;
+    background-size:cover;
+}
+
+body
+{
+    padding-top: 0; 
+    justify-content: center;
+    width: 100%;
+}
+
+body header{
+    overflow: hidden;
+}
+
+body header div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* logo */
+div#logokit{
+    margin-left: 3%;
+    display: flex;
+    align-items: center;
+    margin-right: 12%; 
+    border:  2px dashed white;
+    border-radius: 50%
+}
+div#logokit div{
+    text-align: left;
+    flex-direction: column;
+}
+div#logokit div h1{
+    margin: 0;
+    font-size: 100%;
+    font-weight: bold;
+}
+div#logokit div p#revolution{
+
+    margin: 0 0 0 -4px;
+    line-height: 0.3;
+    font-size: 71%;
+}
+div#logokit figure#logoBlock{
+    margin-left: 10px; 
+    position: relative;
+    z-index: 5;
+}
+
+img#logo{
+    width: 120px;
+    height: 120px;
+    border:  2px dashed white;
+    border-radius: 20%
+
+}
+
+div figure#baniereblock{
+   margin: 0;
+
+}
+
+figure#baniereblock img#baniere{
+    width: 100%;
+
+}
+
+
+
+
+nav{
+    background-color: rgba(0,10,5,0.5);
+    border-radius: 15%;
+    border: 3px solid grey;
+}
+/* menu */
+nav>ul>li>dl{
+    display: flex;
+    position: relative;
+    font-size: 110%;
+    padding: 0 10px;
+}
+
+li a,dt,ul{
+    text-decoration: none;
+    list-style-type: none;
+    color: lightgrey;
+
+
+}
+
+
+/* sous menu */
+#menu{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    color: lightgrey;
+    text-align: center;
+    margin-left: 0%;
+
+}
+
+#menu dl{
+
+    flex-wrap: wrap;
+    width: 100px;
+    justify-content: center;
+}
+
+
+
+main{
+
+    margin: 0;
+    margin-left: 15%;
+    letter-spacing: 2px;
+    
+}
+main h2{
+
+    display: block;
+    font-size: 3em;
+    margin-left: 10%;
+    text-align: left;
+    margin-bottom: 10%;
+
+    
+}
+
+main ul {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+main figure{
+    display: flex;
+    align-items: center;
+    padding: 0 60px 30px 0;
+    margin-left: 20%;
+}
+
+main figure img{
+
+    width: 210px;
+    height: 210px;
+    margin-left: 10%;
+}
+main figure figcaption{
+
+    font-size: 2.5em;
+    font-weight: bold;
+    width: 200px;
+    text-align: left;
+    line-height: 40px;
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 950px){
+
+
+    main h2{
+        font-size: 1.8em;
+        margin-left: 20%;
+        
+    }
+
+
+    main figure{
+        display: flex;
+        align-items: left;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    main figure img{
+        margin: 0;
+        width: 80px;
+        height: 80px;
+    }
+    main figure figcaption{
+        font-size: 1.6em;
+        font-weight: bold;
+        width: 100px;
+        text-align: left;
+        line-height: 20px;
+        padding: 5px 0 0 8px;
+    }
+
+    
+
+
+}
+
+@media screen and (max-width: 500px){
+
+    div#logokit div h1{
+        font-size: 150%;
+    }
+    div#logokit div p#revolution{
+
+        margin: 0 0 0 -15px;
+        line-height: 0.3;
+        font-size: 100%;
+    }
+    div#logokit figure#logoBlock{
+        margin-left: 10px; 
+    }
+
+    img#logo{
+        width: 90px;
+        height: 90px;
+
+    }
+    p#bulle1{
+        display: flex;
+        width: 200px;
+        position: absolute;
+        z-index: 10;
+        top: 27%;
+        left: 21%;
+    }
+
+    p#bulle2{
+        width: 200px;
+        position: absolute;
+        z-index: 10;
+        top: 42%;
+        left: 31%;
+    }
+
+    main h2{
+        font-size: 1.5em;
+        margin-left: 20%;
+        
+    }
+
+
+    main figure{
+        display: flex;
+        align-items: left;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    main figure img{
+        margin: 0;
+        width: 80px;
+        height: 80px;
+    }
+    main figure figcaption{
+        font-size: 1.2em;
+        font-weight: bold;
+        width: 100px;
+        text-align: left;
+        line-height: 20px;
+        padding: 5px 0 0 8px;
+    }
+
+
+}

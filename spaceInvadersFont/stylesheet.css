@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'invanders from space';
+    src: url('spaceInvadersFont/invandersfromspace.eot');
+    src: url('spaceInvadersFont/invandersfromspace.eot?#iefix') format('embedded-opentype'),
+        url('spaceInvadersFont/invandersfromspace.woff2') format('woff2'),
+        url('spaceInvadersFont/invandersfromspace.woff') format('woff'),
+        url('spaceInvadersFont/invandersfromspace.ttf') format('truetype'),
+        url('spaceInvadersFont/invandersfromspace.svg#invandersfromspace') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
