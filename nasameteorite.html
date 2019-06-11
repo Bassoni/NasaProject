@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>Meteorite Landing</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/style2.css">
+    <script src="js/jquery-3.3.0.min.js"></script>
 </head>
 <body>	
     <canvas id="c" ></canvas>
@@ -27,7 +28,7 @@
 		<div>
 			<div id="logokit">
 				<div>
-				<h1>SpaceInvaders</h1>
+					<h1>SpaceInvaders</h1>
 				<p id="revolution"><i>Revolution</i></p>
 				</div>
 				<figure id="logoBlock">
@@ -47,7 +48,7 @@
 				<ul id="menu">
 					<li class="listMenu">
 						<dl>
-							<dt><a href="nasameteorite.html" title="Meteorites">Meteorites</a></dt>
+							<dt><a href="nasa.html" title="Accueil">Accueil</a></dt>
 						</dl>
 					</li>
 					<li class="listMenu">
@@ -88,93 +89,42 @@
     </header>
 
     <main>
-    	<h2>All the stars come from dust</h1>
+    	<h2>meteorites Landing</h1>
     	<ul id="services">
-			<li>
-				<a href="https://www.nasa.gov/topics/earth/index.html" title="Earth">
-					<figure >
-						<div class="imagechange-3d image-hover hover">
-		                    <div class="imagechange-3d-inner">
-		                        <div class="imgchange-1">
-		                        	<img  src="images\img01.jpg" alt="Planete" />
-		                        </div>
-		                        <div class="imgchange-2">
-		                            <img  src="images\voieLactee2.png" alt="voie Lactee" />
-		                        </div>
-		                    </div>
-		                </div>						
-						<figcaption>The Official Nasa Website</figcaption>
-					</figure>
-				</a>
+			<li>				
+				<div id="map"></div>		
+				<label id="whereAreMeteorButton">Where the meteorites have landed</label>
+				<input class="button" id="whereAreMeteorButton" type="button" value=" " onclick="ButtonClickGET()" >			
 			</li>
 			<li>
-				<a href="https://www.nasa.gov/topics/earth/index.html" title="Earth">
-				<figure >
-					<div class="imagechange-3d image-hover hover">
-	                    <div class="imagechange-3d-inner">
-	                        <div class="imgchange-1">
-	                        	<img  src="images\img02.jpg" alt="Meteorites" />
-	                        </div>
-	                        <div class="imgchange-2">
-	                            <img  src="images\voieLactee2.png" alt="voie Lactee" />
-	                        </div>
-	                    </div>
-	                </div>					
-					<figcaption>Fallen Meteorites landing map</figcaption>
-				</figure>
-				</a>				
+				<canvas id="canvas" width="600" height="400">No Love for HTML5 eh?</canvas>
 			</li>
 			<li>
-				<a href="" title="Earth">
-				<figure >
-					<div class="imagechange-3d image-hover hover">
-	                    <div class="imagechange-3d-inner">
-	                        <div class="imgchange-1">
-	                        	<img  src="images\img03.jpg" alt="Planete detruite" />
-	                        </div>
-	                        <div class="imgchange-2">
-	                      -      <img  src="images\voieLactee2.png" alt="voie Lactee" />
-	                        </div>
-	                    </div>
-	                </div>					
-					<figcaption>prevent the earth from being destroyed by asteroids</figcaption>
-				</figure>
-				</a>
+				<div id="tableau">
+			    	<p>Selection des colonnes :</p>
+			    	<div id="labels">
+						<label><input type="radio" name="typeclick" value="1" onclick="setConfig(event)" checked> en cochant le pays</label>
+						<label><input type="radio" name="typeclick" value="2" onclick="setConfig(event)">en selectionant une case</label>
+					</div>
+					<table id="table_dpi" border="1">
+					  <thead>
+					    <tr>
+					      <th><input type="checkbox" value="0" class="checkbox-select-col">France</th> 
+					      <th><input type="checkbox" value="1" class="checkbox-select-col">Spain</th> 
+					      <th><input type="checkbox" value="2" class="checkbox-select-col">Africa</th> 
+					      <th><input type="checkbox" value="3" class="checkbox-select-col">Russia</th> 
+					      <th><input type="checkbox" value="4" class="checkbox-select-col">USA</th> 
+					      <th><input type="checkbox" value="5" class="checkbox-select-col">other Country</th>  
+					    </tr>
+					  </thead> 
+					  <tbody id="tbody">
+
+					  </tbody>
+					</table>
+					<p id="infoArray">plop</p>
+				</div>
 			</li>
-			<li>
-				<a href="https://codepen.io/kermet24/pen/MmpBJV" title="spaceInvaders">
-				<figure >
-					<div class="imagechange-3d image-hover hover">
-	                    <div class="imagechange-3d-inner">
-	                        <div class="imgchange-1">
-	                        	<img  src="images\img04.png" alt="extraterrestre vs terre" />
-	                        </div>
-	                        <div class="imgchange-2">
-	                            <img  src="images\voieLactee2.png" alt="voie Lactee" />
-	                        </div>
-	                    </div>
-	                </div>					
-					<figcaption>Protect earth from Space Invaders</figcaption>
-				</figure>
-				</a>				
-			</li>
-			<li>
-				<a href="https://i.ytimg.com/vi/RuCG0qG_CmU/maxresdefault.jpg" title="Earth">
-				<figure >
-					<div class="imagechange-3d image-hover hover">
-	                    <div class="imagechange-3d-inner">
-	                        <div class="imgchange-1">
-	                        	<img  src="images\img05.jpg" alt="crash meteorite sur terre" />
-	                        </div>
-	                        <div class="imgchange-2">
-	                            <img  src="images\voieLactee2.png" alt="voie Lactee" />
-	                        </div>
-	                    </div>
-	                </div>							
-					<figcaption>End Of Time</figcaption>
-				</figure>
-				</a>
-			</li>
+			
 		</ul>
 		<a id="arrowDown">
 		  <div id="box">
@@ -185,9 +135,7 @@
 		</a>
     </main>
 
-    <footer>
-
-    	
+    <footer>    	
     	<section>
     		<figure id="logoBlockFoot">
 				<img id="logoFoot" src="images/footerLogo.png" alt="Nasa Logo2 " />
@@ -217,7 +165,7 @@
     	</section>
     </footer>
 	
-	
 </body>
-<script src="js/script.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYKYB4J88eeNugRxiq5Laq5Kw6z8xbyns&callback=initMap" type="text/javascript"></script>
+<script src="js/scriptmeteorite.js"></script>
 </html>
